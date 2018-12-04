@@ -1,4 +1,4 @@
-package Sudoku;
+package Sudo_ku;
 import java.awt.*;
 import javax.swing.*;
 
@@ -19,7 +19,18 @@ public class RemoteButton extends JFrame
      JButton button9 = new JButton("9");
      
      Container c = getContentPane();
-     c.setLayout(new FlowLayout());
+     c.setLayout(null);
+     button1.setBounds(30,20,50,20);
+     button2.setBounds(110,20,50,20);
+     button3.setBounds(30,50,50,20);
+     button4.setBounds(110,50,50,20);
+     button5.setBounds(30,80,50,20);
+     button6.setBounds(110,80,50,20);
+     button7.setBounds(30,110,50,20);
+     button8.setBounds(110,110,50,20);
+     button9.setBounds(30,140,50,20);
+     label.setBounds(20,5,200,15);
+     
      c.add(label);
      c.add(button1);
      c.add(button2);
@@ -31,7 +42,7 @@ public class RemoteButton extends JFrame
      c.add(button8);
      c.add(button9);
      setTitle("Sudoku!");
-     setSize(250, 200);         // pack();
+     setSize(250, 220);         // pack();
      setVisible(true);
      }}
      

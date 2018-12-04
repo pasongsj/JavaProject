@@ -48,12 +48,7 @@ class SlidePuzzleBoard
     }
     return binomialCoeff(target_row + target_col, target_row);
   }
-  public static void main(String args[]) {
-	    SlidePuzzleBoard b1 = new SlidePuzzleBoard(4);
-	    System.out.println(b1.computePossibleWays(15));
-	    SlidePuzzleBoard b2 = new SlidePuzzleBoard(5);
-	    System.out.println(b2.computePossibleWays(13));
-	  }
+  
 }
 class PuzzlePiece  { 
 	  private int face_value;  // the value written on the piece's face
