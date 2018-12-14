@@ -1,5 +1,7 @@
 package Sudoku;
 
+import test.SudokuBoard;
+
 public class Sudoku {
 
 	public static void main(String[] args) {
@@ -14,9 +16,10 @@ public class Sudoku {
 	    //new StartPage();
 	      // TODO Auto-generated method stub
 
-	      new StartPage();
+	      //new StartPage();
 	      //new RemoteButton();
-	      
+	      new SudokuBoard();
+	     
 		
 
 	}

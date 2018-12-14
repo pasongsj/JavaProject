@@ -1,11 +1,14 @@
 package test;
 
-import java.util.Random;
+import Sudoku.SudokuBoard;
 
-public class Hello {
+public class Main {
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		new SudokuBoard();
+		SudokuBoard board = new SudokuBoard();
+
+
 	}
 
 }
