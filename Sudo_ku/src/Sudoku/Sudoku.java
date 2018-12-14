@@ -14,11 +14,9 @@ public class Sudoku {
 	    //new StartPage();
 	      // TODO Auto-generated method stub
 
-	      //new StartPage();
+	      new StartPage();
 	      //new RemoteButton();
-	      int size = 9;  // a  9 x 9  slide puzzle
-	      SlidePuzzleBoard board = new SlidePuzzleBoard(size); // see Fig. 10, Ch. 8
-	      PuzzleFrame frame = new PuzzleFrame(size, board);
+	      
 
 		
 

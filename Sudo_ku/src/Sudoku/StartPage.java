@@ -12,6 +12,7 @@ public class StartPage extends JFrame
 { /** Constructor  Frame1  creates a frame with a label and button */
 	
   public StartPage(){ 
+
 	  JLabel label = new JLabel("난이도를 선택하세요    ");
 	  JButton button1 = new JButton("상");
 	  JButton button2 = new JButton("중");
@@ -34,18 +35,27 @@ public class StartPage extends JFrame
 	  button1.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent e) {
               button1.setText("OK 상 clicked.");
+              //int size = 12;  // a  9 x 9  slide puzzle
+    	      SlidePuzzleBoard board = new SlidePuzzleBoard(9); // see Fig. 10, Ch. 8
+    	      PuzzleFrame frame = new PuzzleFrame(9, board);
           }
       });
 
 	  button2.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent e) {
               button2.setText("Ok 중 clicked.");
+              //int size = 9;  // a  9 x 9  slide puzzle
+    	      SlidePuzzleBoard board = new SlidePuzzleBoard(9); // see Fig. 10, Ch. 8
+    	      PuzzleFrame frame = new PuzzleFrame(9, board);
           }
       });
 
 	  button3.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent e) {
               button3.setText("OK 하 clicked.");
+             // int size = 6;  // a  9 x 9  slide puzzle
+    	      SlidePuzzleBoard board = new SlidePuzzleBoard(9); // see Fig. 10, Ch. 8
+    	      PuzzleFrame frame = new PuzzleFrame(9, board);
           }
       });
 	  Exit.addActionListener(new ActionListener() {
@@ -59,6 +69,9 @@ public class StartPage extends JFrame
 	  setSize(560, 560);			// pack();
 	  setVisible(true);
 	  button1.setBackground (Color.yellow);
+	  button2.setBackground (Color.yellow);
+	  button3.setBackground (Color.yellow);
+	  
 	  }
   
 
