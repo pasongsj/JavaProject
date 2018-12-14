@@ -12,18 +12,10 @@ public class StartPage extends JFrame
 { /** Constructor  Frame1  creates a frame with a label and button */
 	
   public StartPage(){ 
-<<<<<<< Updated upstream
-
-	  JLabel label = new JLabel("³­ÀÌµµ¸¦ ¼±ÅÃÇÏ¼¼¿ä    ");
-	  JButton button1 = new JButton("»ó");
-	  JButton button2 = new JButton("Áß");
-	  JButton button3 = new JButton("ÇÏ");
-=======
 	  JLabel label = new JLabel("ë‚œì´ë„ë¥¼ ì„ íƒí•˜ì„¸ìš”    ");
 	  JButton button1 = new JButton("ìƒ");
 	  JButton button2 = new JButton("ì¤‘");
 	  JButton button3 = new JButton("í•˜");
->>>>>>> Stashed changes
 	  JButton Exit = new JButton("Exit");
 	  Container c = getContentPane();
 	  c.setLayout(null);
@@ -41,40 +33,31 @@ public class StartPage extends JFrame
 	  
 	  button1.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent e) {
-<<<<<<< Updated upstream
-              button1.setText("OK »ó clicked.");
-              //int size = 12;  // a  9 x 9  slide puzzle
-    	      SlidePuzzleBoard board = new SlidePuzzleBoard(9); // see Fig. 10, Ch. 8
-    	      PuzzleFrame frame = new PuzzleFrame(9, board);
-=======
               button1.setText("OK ìƒ clicked.");
->>>>>>> Stashed changes
+              int size = 9;  // a  9 x 9  slide puzzle
+    	      SlidePuzzleBoard board = new SlidePuzzleBoard(size); // see Fig. 10, Ch. 8
+    	      PuzzleFrame frame = new PuzzleFrame(size, board);
+
           }
       });
 
 	  button2.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent e) {
-<<<<<<< Updated upstream
-              button2.setText("Ok Áß clicked.");
-              //int size = 9;  // a  9 x 9  slide puzzle
-    	      SlidePuzzleBoard board = new SlidePuzzleBoard(9); // see Fig. 10, Ch. 8
-    	      PuzzleFrame frame = new PuzzleFrame(9, board);
-=======
               button2.setText("Ok ì¤‘ clicked.");
->>>>>>> Stashed changes
+              int size = 9;  // a  9 x 9  slide puzzle
+    	      SlidePuzzleBoard board = new SlidePuzzleBoard(size); // see Fig. 10, Ch. 8
+    	      PuzzleFrame frame = new PuzzleFrame(size, board);
+
           }
       });
 
 	  button3.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent e) {
-<<<<<<< Updated upstream
-              button3.setText("OK ÇÏ clicked.");
-             // int size = 6;  // a  9 x 9  slide puzzle
-    	      SlidePuzzleBoard board = new SlidePuzzleBoard(9); // see Fig. 10, Ch. 8
-    	      PuzzleFrame frame = new PuzzleFrame(9, board);
-=======
               button3.setText("OK í•˜ clicked.");
->>>>>>> Stashed changes
+              int size = 9;  // a  9 x 9  slide puzzle
+    	      SlidePuzzleBoard board = new SlidePuzzleBoard(size); // see Fig. 10, Ch. 8
+    	      PuzzleFrame frame = new PuzzleFrame(size, board);
+
           }
       });
 	  Exit.addActionListener(new ActionListener() {
@@ -88,9 +71,6 @@ public class StartPage extends JFrame
 	  setSize(560, 560);			// pack();
 	  setVisible(true);
 	  button1.setBackground (Color.yellow);
-	  button2.setBackground (Color.yellow);
-	  button3.setBackground (Color.yellow);
-	  
 	  }
   
 

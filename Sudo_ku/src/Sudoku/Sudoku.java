@@ -17,7 +17,6 @@ public class Sudoku {
 	      new StartPage();
 	      //new RemoteButton();
 	      
-
 		
 
 	}
