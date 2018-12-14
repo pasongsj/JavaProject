@@ -5,6 +5,7 @@ import test.SudokuBoard;
 public class Sudoku {
 
 	public static void main(String[] args) {
+		
 		// TODO Auto-generated method stub
 
 		//new StartPage();
@@ -14,11 +15,11 @@ public class Sudoku {
 	    //SlidePuzzleBoard b2 = new SlidePuzzleBoard(5);
 	    //System.out.println(b2.computePossibleWays(13));
 	    //new StartPage();
-	      // TODO Auto-generated method stub
+	    // TODO Auto-generated method stub
 
-	      //new StartPage();
-	      //new RemoteButton();
-	      new SudokuBoard();
+	    new StartPage();
+	    //new RemoteButton();
+	  
 	     
 		
 
