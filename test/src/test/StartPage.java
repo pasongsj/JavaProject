@@ -15,7 +15,7 @@ public class StartPage extends JFrame
 	  JLabel label = new JLabel("난이도를 선택하세요");
 	  JButton button1 = new JButton("상");
 	  JButton button2 = new JButton("중");
-	  JButton button3 = new JButton("");
+	  JButton button3 = new JButton("하 ");
 	  JButton Exit = new JButton("Exit");
 	  Container c = getContentPane();
 	  c.setLayout(null);
