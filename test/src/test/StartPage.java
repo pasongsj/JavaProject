@@ -16,7 +16,6 @@ public class StartPage extends JFrame
 	  JButton button1 = new JButton("?ÉÅ");
 	  JButton button2 = new JButton("Ï§?");
 	  JButton button3 = new JButton("?ïò");
-	  JButton Exit = new JButton("Exit");
 	  Container c = getContentPane();
 	  c.setLayout(null);
 
@@ -24,16 +23,14 @@ public class StartPage extends JFrame
 	  button1.setBounds(190,160,100,40);
 	  button2.setBounds(190,240,100,40);
 	  button3.setBounds(190,320,100,40);
-	  Exit.setBounds(480,1,60,40);
 	  c.add(label);
 	  c.add(button1);
 	  c.add(button2);
 	  c.add(button3);
-	  c.add(Exit);
 	  
 	  button1.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent e) {
-              button1.setText("OK ?ÉÅ clicked.");
+              button1.setText("OK ? HIGH.");
               int size = 9;  // a  9 x 9  slide puzzle
     	      SlideSudokuBoard board = new SlideSudokuBoard(size,60); // see Fig. 10, Ch. 8
     	      SudokuFrame frame = new SudokuFrame(size, board);
@@ -43,7 +40,7 @@ public class StartPage extends JFrame
 
 	  button2.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent e) {
-              button2.setText("Ok Ï§? clicked.");
+              button2.setText("Ok ? MIDDLE.");
               int size = 9;  // a  9 x 9  slide puzzle
     	      SlideSudokuBoard board = new SlideSudokuBoard(size,45); // see Fig. 10, Ch. 8
     	      SudokuFrame frame = new SudokuFrame(size, board);
@@ -53,19 +50,15 @@ public class StartPage extends JFrame
 
 	  button3.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent e) {
-              button3.setText("OK ?ïò clicked.");
+              button3.setText("OK ? LOW.");
               int size = 9;  // a  9 x 9  slide puzzle
     	      SlideSudokuBoard board = new SlideSudokuBoard(size,30); // see Fig. 10, Ch. 8
     	      SudokuFrame frame = new SudokuFrame(size, board);
 
           }
       });
-	  Exit.addActionListener(new ActionListener() {
-          public void actionPerformed(ActionEvent e) {
-              Exit.setText("Cancel Button clicked.");
-              System.exit(0);
-          }
-      });
+	  
+	  addWindowListener(new ExitController());
 
 	  setTitle("Sudoku!");
 	  setSize(560, 560);			// pack();

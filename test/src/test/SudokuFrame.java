@@ -31,6 +31,7 @@ public class SudokuFrame extends JFrame {
 		addWindowListener(new ExitController());
 		setTitle("Sudoku");
 	    setSize(size * kan_size + 10,  size * kan_size + 20);
+	    //c.setVisible(true);
 	    setVisible(true);
 		
 		
