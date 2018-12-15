@@ -11,7 +11,7 @@ public class SlideSudokuBoard {
 	private int emp_r;//后 青
 	private int emp_c;//后 凯
 	
-	public  SlideSudokuBoard(int s) {
+	public  SlideSudokuBoard(int s, int hole) {
 		size = s;
 		board = new BoardPiece[size][size];
 		answerboard = new BoardPiece[size][size];
@@ -20,13 +20,17 @@ public class SlideSudokuBoard {
 		int i,j,k;
 		
 		for( i=0;i<size;i++) {
-			BoardPiece l = new BoardPiece(i);
+			BoardPiece l = new BoardPiece(i+1);
 			m = i;//凯
 			n = 0;//青
 			for( j=0;j<size;j=j+3) {
 				for(k=0;k<size;k=k+3) {
-					if(m>8)    m=m-8;
-					if(n>8)    n=n-8;
+					while(m>8){
+						m=m-9;
+					}
+					while(n>8) {
+						n=n-8;
+					}
 					board[n][m] = l;
 					m++;
 					n=n+3;
@@ -60,16 +64,15 @@ public class SlideSudokuBoard {
 			}
 		}
 		// 后沫 墩扁
-		BoardPiece r = new BoardPiece(0);
-        int hole = 50 ;
+		
 		
 		while(hole>0) {
 			Random random = new Random();
 		    i = random.nextInt(9);
 			j = random.nextInt(9);
 			
-			if(board[i][j] != r) {
-				board[i][j] = r;
+			if(board[i][j] != null) {
+				board[i][j] = null;
 				hole--;
 			}
 		}
@@ -88,6 +91,11 @@ public class SlideSudokuBoard {
 //			    }
 //		    System.out.println("");
 //	    }
+//		
+//	}
+//	public void enter(int i) {
+//		BoardPiece j = new BoardPiece(i);
+//		return j;
 //		
 //	}
 	public BoardPiece[][] contents(){ 

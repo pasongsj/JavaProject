@@ -35,10 +35,9 @@ public class StartPage extends JFrame
           public void actionPerformed(ActionEvent e) {
               button1.setText("OK ?ÉÅ clicked.");
               int size = 9;  // a  9 x 9  slide puzzle
-    	      SlidePuzzleBoard board = new SlidePuzzleBoard(size); // see Fig. 10, Ch. 8
-    	      PuzzleFrame frame = new PuzzleFrame(size, board);
-    	      System.exit(0);
-
+    	      SlideSudokuBoard board = new SlideSudokuBoard(size,60); // see Fig. 10, Ch. 8
+    	      SudokuFrame frame = new SudokuFrame(size, board);
+    	      
           }
       });
 
@@ -46,9 +45,8 @@ public class StartPage extends JFrame
           public void actionPerformed(ActionEvent e) {
               button2.setText("Ok Ï§? clicked.");
               int size = 9;  // a  9 x 9  slide puzzle
-    	      SlidePuzzleBoard board = new SlidePuzzleBoard(size); // see Fig. 10, Ch. 8
-    	      PuzzleFrame frame = new PuzzleFrame(size, board);
-    	      System.exit(0);
+    	      SlideSudokuBoard board = new SlideSudokuBoard(size,45); // see Fig. 10, Ch. 8
+    	      SudokuFrame frame = new SudokuFrame(size, board);
 
           }
       });
@@ -57,9 +55,8 @@ public class StartPage extends JFrame
           public void actionPerformed(ActionEvent e) {
               button3.setText("OK ?ïò clicked.");
               int size = 9;  // a  9 x 9  slide puzzle
-    	      SlidePuzzleBoard board = new SlidePuzzleBoard(size); // see Fig. 10, Ch. 8
-    	      PuzzleFrame frame = new PuzzleFrame(size, board);
-    	      System.exit(0);
+    	      SlideSudokuBoard board = new SlideSudokuBoard(size,30); // see Fig. 10, Ch. 8
+    	      SudokuFrame frame = new SudokuFrame(size, board);
 
           }
       });
@@ -74,6 +71,8 @@ public class StartPage extends JFrame
 	  setSize(560, 560);			// pack();
 	  setVisible(true);
 	  button1.setBackground (Color.yellow);
+	  button2.setBackground (Color.yellow);
+	  button3.setBackground (Color.yellow);
 	  }
   
 
