@@ -71,6 +71,8 @@ public class StartPage extends JFrame
 	  setSize(560, 560);			// pack();
 	  setVisible(true);
 	  button1.setBackground (Color.yellow);
+	  button2.setBackground (Color.yellow);
+	  button3.setBackground (Color.yellow);
 	  }
   
 

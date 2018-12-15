@@ -15,7 +15,7 @@ public class Sudoku {
 	      // TODO Auto-generated method stub
 
 	      new StartPage();
-	      //new RemoteButton();
+	      new TimerTest();
 	      
 		
 
