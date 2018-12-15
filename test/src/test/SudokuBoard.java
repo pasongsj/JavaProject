@@ -3,7 +3,7 @@ package test;
 import java.util.Random;
 
 public class SudokuBoard {
-	public SudokuBoard() {
+	public  SudokuBoard() {
 		// TODO Auto-generated method stub
 		int array[][] = {{8,1,2,7,5,3,6,4,9},{9,4,3,6,8,2,1,7,5},{6,7,5,4,9,1,2,8,3},
 	        	{1,5,4,2,3,7,8,9,6},{3,6,9,8,4,5,7,2,1},{2,8,7,1,6,9,5,3,4},
@@ -34,12 +34,41 @@ public class SudokuBoard {
 				array[j][rand2] = tmp[j][0];	
 			}
 		}
-		System.out.print(array[0][0]);
+		PrintSudoku(array);
+		SudokuMakeHole(array);
+		System.out.println("-------------");
+		PrintSudoku(array);
+	
+    }
+	public SudokuBoard[][] MakeHole (SudokuBoard[][] board) {
+		int i,j;
+		int hole = 50 ;
+		while(hole>0) {
+			Random random = new Random();
+		    i = random.nextInt(9);
+			j = random.nextInt(9);
+			
+			if(board[i][j]!=0) {
+				board[i][j] = 0;
+				hole--;
+			}
+		}
+		return board;
+		
+	}
+	public void PrintSudoku(int board[][]) {
+		int i=0;
+		int j=0;
 		for(i=0;i<9;i++) {
 			for(j=0;j<9;j++) {
-				System.out.print(array[i][j]);
-			}
-				System.out.println("");
-		}
+			    System.out.print(board[i][j]);	
+			    }
+		    System.out.println("");
+	    }
+		
 	}
+
 }
+
+	
+

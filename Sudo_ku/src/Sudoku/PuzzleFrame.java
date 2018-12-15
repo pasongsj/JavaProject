@@ -5,6 +5,7 @@ import javax.swing.*;
 /** PuzzleFrame shows a slide puzzle */
 public class PuzzleFrame extends JFrame
 { private SlidePuzzleBoard board;   // the model; see Fig.11, Ch.8
+  private SudokuBoard board1;
   private int size;                 // the board's size
   private int button_size = 60;     // width/height of each button
   private PuzzleButton[][] button;  // the buttons on the face of the view
@@ -37,7 +38,8 @@ public class PuzzleFrame extends JFrame
 
   /** update  consults the model and repaints each button */
   public void update()
-  { PuzzlePiece[][] r = board.contents();  //  get contents of the puzzle
+  { PuzzlePiece[][] r = board.contents();//  get contents of the puzzle
+    SudokuBoard[][] k = board1.SudokuMakeHole();
     for ( int i = 0; i != size; i = i+1 )  // redraw all the buttons
         { for ( int j = 0; j != size; j = j+1 )
                 { if((i>2&&i<=5)&&(j<3||j>5)) {
@@ -49,6 +51,10 @@ public class PuzzleFrame extends JFrame
                 else {
                 	button[i][j].setBackground(Color.white);
                 }
+                if(k[i][j] != null) {
+                	button[i][j].setText("" + k[i][j]);
+                }
+                
 //              { if ( r[i][j] != null )
 //                     { button[i][j].setBackground(Color.white);
 //                       button[i][j].setText("" + r[i][j].valueOf());}
@@ -59,5 +65,10 @@ public class PuzzleFrame extends JFrame
               }
         }
   }
+<<<<<<< HEAD
   
+=======
+
+
+>>>>>>> master
 }
