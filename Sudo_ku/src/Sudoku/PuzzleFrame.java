@@ -19,6 +19,7 @@ public class PuzzleFrame extends JFrame
     button = new PuzzleButton[size][size];
     Container cp = getContentPane();
     cp.setLayout(new GridLayout(size, size));
+    
     // create the button-controllers and insert them into the layout:
     for ( int i = 0; i != size; i = i+1 )
         { for ( int j = 0; j != size; j = j+1 )
@@ -26,6 +27,8 @@ public class PuzzleFrame extends JFrame
                 cp.add(button[i][j]);
               }
         }
+    
+  
     update();  // initialize the pieces with their numbers
     addWindowListener(new ExitController()); // activates X-button; see Fig. 15 
     setTitle("PuzzleFrame");
@@ -62,6 +65,10 @@ public class PuzzleFrame extends JFrame
               }
         }
   }
+<<<<<<< HEAD
+  
+=======
 
 
+>>>>>>> master
 }

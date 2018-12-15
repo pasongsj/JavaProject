@@ -17,10 +17,16 @@ public class Sudoku {
 	    //new StartPage();
 	    // TODO Auto-generated method stub
 
+<<<<<<< HEAD
+	      new StartPage();
+	      new TimerTest();
+	      
+=======
 	    new StartPage();
 	    //new RemoteButton();
 	  
 	     
+>>>>>>> master
 		
 
 	}
