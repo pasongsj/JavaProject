@@ -1,6 +1,7 @@
 package test;//cf SlidePuzzleBoard
 
 import java.awt.event.MouseEvent;
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.awt.event.ActionListener;
 import javax.swing.event.MouseInputAdapter;
@@ -132,15 +133,25 @@ public class SlideSudokuBoard {
       boolean answer = false;
       if(board[x][y].valueOf() == 0) {
          Scanner sc=new Scanner(System.in);
-         num = sc.nextInt();
-         
-         
+         try {
+        	 num = sc.nextInt();
+         }
+         catch(InputMismatchException e ) {
+        	 System.out.println("Enter Integer");
+         }
+        	 
       }
+         
+         
+      
       re = new BoardPiece(num);
       if(answerboard[x][y].valueOf() == re.valueOf()) {
     	  board[x][y] = re;
     	  System.out.println(board[x][y].valueOf());
          answer = true;
+      }
+      else {
+    	  System.out.println("Worng");
       }
 
       return answer;
