@@ -16,9 +16,19 @@ public class SudokuButton extends JButton implements ActionListener{
       addActionListener(this);
    }
    @Override
-public void actionPerformed(ActionEvent event) {//입력받고 바꾸기
-      
-	   view.addMouseListener(new SudokuPanelMouseAdapter());
+public void actionPerformed(ActionEvent e) {//입력받고 바꾸기
+	   SudokuButton bt = (SudokuButton)e.getSource();
+	   BoardPiece[][] m = num.contents();
+	   int col = bt.getX() / 60;
+	   int row = bt.getY() / 60;
+	   System.out.print(row);
+	   System.out.println(col);
+	   //System.out.println(m[row][col]);
+	   boolean ok = num.EnterNum(row,col);
+	   if(ok)    view.update();
+	   
+
+
 //      String s = getText();  // get the number on the face of this button
 //       if ( !s.equals("") ){
 //    	   view.MouseEventDemo;

@@ -62,7 +62,7 @@ public class SudokuFrame extends JFrame {
                  else {
                      kan[i][j].setBackground(Color.white);
                  }
-                 if(m[i][j] != null) {
+                 if(m[i][j].valueOf() != 0) {
                      kan[i][j].setText(""+m[i][j].valueOf());
                  }
                  else {
