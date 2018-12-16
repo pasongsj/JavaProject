@@ -27,12 +27,6 @@ public void actionPerformed(ActionEvent e) {//입력받고 바꾸기
 	   boolean ok = num.EnterNum(row,col);
 	   if(ok)    view.update();
 	   
-
-
-//      String s = getText();  // get the number on the face of this button
-//       if ( !s.equals("") ){
-//    	   view.MouseEventDemo;
-//       }
        }
 }
 

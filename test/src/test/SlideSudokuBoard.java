@@ -1,11 +1,12 @@
 package test;//cf SlidePuzzleBoard
 
-import java.awt.event.MouseEvent;
 import java.util.InputMismatchException;
 import java.util.Random;
-import java.awt.event.ActionListener;
+
 import javax.swing.event.MouseInputAdapter;
 import javax.swing.*;
+
+import java.awt.Button;
 import java.awt.event.*;
 import java.util.Scanner;
 
@@ -15,6 +16,7 @@ public class SlideSudokuBoard {
    private BoardPiece[][] board;
    private BoardPiece[][] answerboard;
    private BoardPiece re;
+
    
    
 //   private int emp_r;//บ๓ วเ
@@ -132,13 +134,14 @@ public class SlideSudokuBoard {
       int num = 0;
       boolean answer = false;
       if(board[x][y].valueOf() == 0) {
-         Scanner sc=new Scanner(System.in);
-         try {
-        	 num = sc.nextInt();
-         }
-         catch(InputMismatchException e ) {
-        	 System.out.println("Enter Integer");
-         }
+    	  
+//         Scanner sc=new Scanner(System.in);
+//         try {
+//        	 num = sc.nextInt();
+//         }
+//         catch(InputMismatchException e ) {
+//        	 System.out.println("Enter Integer");
+//         }
         	 
       }
          
@@ -156,6 +159,11 @@ public class SlideSudokuBoard {
 
       return answer;
       
+   }
+   public void actionPerformed(ActionEvent e) {
+	   String a = (String) e.getSource();
+	   int b = Integer.parseInt(a);
+
    }
 //   private class SudokuPanelMouseAdapter extends MouseInputAdapter {
 //        @Override

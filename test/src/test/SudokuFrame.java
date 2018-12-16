@@ -32,10 +32,10 @@ public class SudokuFrame extends JFrame {
         button = new JButton[9];
         String k;
         for(int i=0;i<size;i++) {
-        	k = "" +i;
-        	button[i] = new JButton(k);
-        	button[i].setBounds(700, 50+i*40, 40, 30);
-        	c.add(button[i]);
+           k = "" +i;
+           button[i] = new JButton(k);
+           button[i].setBounds(700, 50+i*40, 40, 30);
+           c.add(button[i]);
         }
       //칸 컨드롤러 생성
         for(int i=0;i<size;i++) {
@@ -83,4 +83,3 @@ public class SudokuFrame extends JFrame {
      }
 
 }
-
