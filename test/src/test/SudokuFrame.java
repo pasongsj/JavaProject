@@ -4,14 +4,17 @@ import java.awt.FlowLayout;
 import java.awt.Color;
 import java.awt.event.*;
 import java.awt.Dimension;
+import javax.swing.event.MouseInputAdapter;
+import java.awt.event.MouseEvent;
 
 public class SudokuFrame extends JFrame {
-	private JPanel buttonSelectionPanel;
+   private JPanel buttonSelectionPanel;
     private SlideSudokuBoard board;
     private SlideSudokuBoard answerboard;
     private int size;
     private int kan_size = 60; //칸사이즈
     private SudokuButton[][] kan;
+
     
    
     public SudokuFrame(int boardsize, SlideSudokuBoard b) {
@@ -29,7 +32,7 @@ public class SudokuFrame extends JFrame {
       //칸 컨드롤러 생성
         for(int i=0;i<size;i++) {
             for(int j=0;j<size;j++) {
-                kan[i][j]= new SudokuButton(board,this,kan[i][j]);
+                kan[i][j]= new SudokuButton(board,this);
                 kan[i][j].setBounds(i*kan_size,j*kan_size,kan_size,kan_size);
                 c.add(kan[i][j]);
             
@@ -41,6 +44,7 @@ public class SudokuFrame extends JFrame {
      setSize(size * kan_size + 200,  size * kan_size + 400);
        //c.setVisible(true);
      setVisible(true);
+     
       
       
      }
@@ -69,7 +73,6 @@ public class SudokuFrame extends JFrame {
          }
       
      }
-     
-
 
 }
+

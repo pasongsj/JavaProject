@@ -1,6 +1,12 @@
 package test;//cf SlidePuzzleBoard
 
+import java.awt.event.MouseEvent;
 import java.util.Random;
+import java.awt.event.ActionListener;
+import javax.swing.event.MouseInputAdapter;
+import javax.swing.*;
+import java.awt.event.*;
+
 
 public class SlideSudokuBoard {
 	private int size;
@@ -10,6 +16,9 @@ public class SlideSudokuBoard {
 	
 	private int emp_r;//빈 행
 	private int emp_c;//빈 열
+    private int slotWidth;
+    private int slotHeight;
+
 	
 	public  SlideSudokuBoard(int s, int hole) {
 		size = s;
@@ -80,12 +89,6 @@ public class SlideSudokuBoard {
 		
 	
     }
-	public void EnterNum(int i , SudokuButton k ){
-		k = 
-		
-		
-	}
-
 	
 //	public void PrintSudoku(int board[][]) {//보드 프린트_콘솔버전
 //		int i=0;
@@ -116,6 +119,34 @@ public class SlideSudokuBoard {
 		// TODO Auto-generated method stub
 		
 	}
+	public boolean EnterNum(int num,int x,int y) {
+		
+		boolean answer = false;
+		BoardPiece re = new BoardPiece(num);
+		//if(answerboard[x][y] == re) {
+			board[x][y] = re;
+			answer = true;
+		//}
+
+		return answer;
+		
+	}
+	private class SudokuPanelMouseAdapter extends MouseInputAdapter {
+  		@Override
+  		public void mouseClicked(MouseEvent e) {
+  			if(e.getButton() == MouseEvent.BUTTON1) {
+  				//slotWidth = usedWidth/puzzle.getNumColumns();
+  				//slotHeight = usedHeight/puzzle.getNumRows();
+  				slotWidth = e.getY()/60;
+  				slotHeight = e.getX()/60;
+  				System.out.println(slotWidth);
+  				System.out.println(slotHeight);
+  				//currentlySelectedRow = e.getY() / slotHeight;
+  				//currentlySelectedCol = e.getX() / slotWidth;
+  				e.getComponent().repaint();
+  			}
+  		}
+  	}
 	
 	
 
