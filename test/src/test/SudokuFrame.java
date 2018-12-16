@@ -14,6 +14,7 @@ public class SudokuFrame extends JFrame {
     private int size;
     private int kan_size = 60; //칸사이즈
     private SudokuButton[][] kan;
+    private JButton[] button;
 
     
    
@@ -22,13 +23,20 @@ public class SudokuFrame extends JFrame {
         board = b;
         kan = new SudokuButton[size][size];
         JPanel c = new JPanel();
-        
         c.setLayout(null);
         c.setPreferredSize(new Dimension(800,600));
         buttonSelectionPanel = new JPanel();
         buttonSelectionPanel.setPreferredSize(new Dimension(90,500));
         c.add(buttonSelectionPanel);
         this.add(c);
+        button = new JButton[9];
+        String k;
+        for(int i=0;i<size;i++) {
+        	k = "" +i;
+        	button[i] = new JButton(k);
+        	button[i].setBounds(700, 50+i*40, 40, 30);
+        	c.add(button[i]);
+        }
       //칸 컨드롤러 생성
         for(int i=0;i<size;i++) {
             for(int j=0;j<size;j++) {
@@ -41,7 +49,7 @@ public class SudokuFrame extends JFrame {
      update();
      addWindowListener(new ExitController());
      setTitle("Sudoku");
-     setSize(size * kan_size + 200,  size * kan_size + 400);
+     setSize(size * kan_size + 300,  size * kan_size + 50);
        //c.setVisible(true);
      setVisible(true);
      
