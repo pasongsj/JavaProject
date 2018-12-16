@@ -1,11 +1,11 @@
 package test;
 import javax.swing.*;
 import java.awt.FlowLayout;
+import java.awt.Button;
 import java.awt.Color;
 import java.awt.event.*;
 import java.awt.Dimension;
 import javax.swing.event.MouseInputAdapter;
-import java.awt.event.MouseEvent;
 
 public class SudokuFrame extends JFrame {
    private JPanel buttonSelectionPanel;
@@ -37,6 +37,7 @@ public class SudokuFrame extends JFrame {
            button[i].setBounds(700, 50+i*40, 40, 30);
            c.add(button[i]);
         }
+        
       //칸 컨드롤러 생성
         for(int i=0;i<size;i++) {
             for(int j=0;j<size;j++) {
@@ -46,12 +47,24 @@ public class SudokuFrame extends JFrame {
             
             }
         }
+        
      update();
      addWindowListener(new ExitController());
      setTitle("Sudoku");
      setSize(size * kan_size + 300,  size * kan_size + 50);
        //c.setVisible(true);
      setVisible(true);
+//     int b1;
+//     for(int i=0;i<9;i++) {
+//    	 button[i].addActionListener(new ActionListener()){
+//		 public void actionPerformed(ActionEvent e) {
+//			   String a = (String) e.getSource();
+//			   b1 = Integer.parseInt(a);
+//		   }
+//		  
+//	  }
+//     }
+     
      
       
       

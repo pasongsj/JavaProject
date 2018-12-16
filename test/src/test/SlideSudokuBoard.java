@@ -135,13 +135,14 @@ public class SlideSudokuBoard {
       boolean answer = false;
       if(board[x][y].valueOf() == 0) {
     	  
-//         Scanner sc=new Scanner(System.in);
-//         try {
-//        	 num = sc.nextInt();
-//         }
-//         catch(InputMismatchException e ) {
-//        	 System.out.println("Enter Integer");
-//         }
+         Scanner sc=new Scanner(System.in);// 버튼 연동 실패
+         try {
+        	 num = sc.nextInt();
+         }
+         catch(InputMismatchException e ) {
+        	 System.out.println("Enter Integer");
+         }
+    	  
         	 
       }
          
