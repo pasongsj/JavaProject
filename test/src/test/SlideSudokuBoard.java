@@ -80,6 +80,11 @@ public class SlideSudokuBoard {
 		
 	
     }
+	public void EnterNum(int i , SudokuButton k ){
+		k = 
+		
+		
+	}
 
 	
 //	public void PrintSudoku(int board[][]) {//보드 프린트_콘솔버전
@@ -106,12 +111,12 @@ public class SlideSudokuBoard {
 	        }
 	    return answer;
 	  }
-	private boolean found(int v, int row, int col){ 
-		boolean answer = false;
-	    if ( row >= 0  &&  row < size  &&  col >= 0  &&  col < size )
-	       { answer = ( board[row][col].valueOf() == v ); }
-	    return answer;
-	  }
+	public void setText(int s) {
+		
+		// TODO Auto-generated method stub
+		
+	}
+	
 	
 
 }
